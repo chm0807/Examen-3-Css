@@ -14,8 +14,7 @@
 /* Block: body */
 .body {
     background-color: #333333;
-    margin: 0px;
-    margin-left: 122px;
+    margin: 0;
     font-family: Tahoma, Arial, Verdana, sans-serif;
     font-size: 11px;
     line-height: 15px;
@@ -25,18 +24,18 @@
 
 /* Block: container */
 .container {
-    position: absolute;
-    margin-top: 0px;
-    width: 658px;
+    position: relative;
+    margin: 0; /* Elimina el margen superior para asegurar que el contenedor comience desde el borde superior */
+    width: 100vw; /* Asegura que el contenedor ocupe todo el ancho de la ventana */
     background-image: url("../img/header.jpg");
     background-repeat: no-repeat;
-    background-position: top;
+    background-position: top left;
     background-color: #020106;
 }
 
 /* Block: intro */
 .intro {
-    margin-top: 0px;
+    margin-top: 0;
     text-align: right;
     color: #FFFFFF;
 }
@@ -51,19 +50,25 @@
 .pageHeader__h1,
 .pageHeader__h2,
 .pageHeader__span {
-    height: 5px;
+    height: 15px;
 }
 
 /* Block: supportingText, linkList */
-.supportingText,
+.supportingText{
+    padding: 25px;
+    width: 100%;
+    max-width: 890px;
+}
+
 .linkList {
     padding: 25px;
-    width: 420px;
+    width: 100%;
+    max-width: 320px;
 }
 
 /* Block: intro, Element: h3 */
 .intro__h3 {
-    width: 313px;
+    width: 100%;
     height: 75px;
 }
 
@@ -71,28 +76,28 @@
 .p--p1,
 .p--p2,
 .p--p3 {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     margin-top: 8px;
 }
 
 /* Block: explanation, Element: h3 */
 .explanation__h3 {
-    width: 313px;
+    width: 100%;
     height: 10px;
-    margin: 0px;
+    margin: 0;
     padding: 25px 0 0 0;
 }
 
 /* Block: participation, Element: h3 */
 .participation__h3 {
-    width: 313px;
+    width: 100%;
     height: 10px;
 }
 
 /* Block: benefits, Element: h3 */
 .benefits__h3 {
-    width: 313px;
+    width: 100%;
     height: 10px;
 }
 
@@ -100,22 +105,22 @@
 .linkList {
     position: absolute;
     top: 300px;
-    left: 450px;
-    width: 100px;
+    right: 0;
+    width: 100%;
     height: auto;
     z-index: 1;
 }
 
 /* Block: lselect */
 .lselect {
-    width: 100px;
+    width: 100%;
     height: auto;
     color: #CCCCCC;
 }
 
 /* Block: lselect, Element: h3 */
 .lselect__h3 {
-    width: 229px;
+    width: 100%;
     height: 50px;
 }
 
@@ -127,7 +132,7 @@
 /* Block: lselect, Element: li */
 .lselect__li {
     border-bottom: 1px dotted #FFFFFF;
-    width: 100px;
+    width: 100%;
     margin-bottom: 8px;
 }
 
@@ -170,27 +175,27 @@
 
 .larchives__li,
 .lresources__li {
-    width: 100px;
+    width: 100%;
     list-style-position: outside;
 }
 
 .larchives {
-    width: 100px;
+    width: 100%;
     height: 169px;
 }
 
 .larchives__h3 {
-    width: auto;
+    width: 100%;
     height: 40px;
-    top: 0px;
-    margin: 0px;
-    padding: 0px;
+    top: 0;
+    margin: 0;
+    padding: 0;
 }
 
 /* Block: footer */
 .footer {
     background-repeat: no-repeat;
-    width: 470px;
+    width: 150%; /* Asegura que el pie de página ocupe todo el ancho disponible */
     height: 15px;
     text-align: center;
     margin-top: 30px;
